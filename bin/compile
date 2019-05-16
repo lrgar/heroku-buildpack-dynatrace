@@ -4,6 +4,9 @@
 set -e   # fail fast
 # set -x # enable debugging
 
+echo $@
+env
+
 # Configure directories
 BUILD_DIR=$1
 CACHE_DIR=$2
@@ -101,8 +104,6 @@ set -e
 
 puts_step "Running Dynatrace OneAgent installer..."
 sh "${INSTALLER_FILE}" "${BUILD_DIR}"
-
-env
 
 # Set procfile
 puts_step "Configuring Dynatrace Oneagent..."

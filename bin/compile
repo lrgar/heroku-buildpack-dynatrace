@@ -102,6 +102,8 @@ set -e
 puts_step "Running Dynatrace OneAgent installer..."
 sh "${INSTALLER_FILE}" "${BUILD_DIR}"
 
+env
+
 # Set procfile
 puts_step "Configuring Dynatrace Oneagent..."
 

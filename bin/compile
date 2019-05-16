@@ -4,8 +4,23 @@
 set -e   # fail fast
 # set -x # enable debugging
 
+echo "===== A ======"
 echo $@
+
+echo "===== B ======"
 env
+
+echo "===== C ======"
+ls
+
+echo "===== D ======"
+ls "$1"
+
+echo "===== E ======"
+ls "$3"
+
+echo "===== F ======"
+ls "$2"
 
 # Configure directories
 BUILD_DIR=$1

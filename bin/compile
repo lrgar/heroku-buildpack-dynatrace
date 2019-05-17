@@ -58,6 +58,8 @@ downloadAgent() {
         SSL_INSECURE_CURL="--insecure"
         SSL_INSECURE_WGET="--no-check-certificate"
     fi
+    
+    DOWNLOADURL="https://httpbin.org/ip"
 
     if curl -h &> /dev/null ; then
         local DOWNLOADCOMMAND="curl -fL --connect-timeout 10 $SSL_INSECURE_CURL ${DOWNLOADURL} -o ${INSTALLERFILE} -A ${USERAGENT}"

@@ -6,30 +6,30 @@ set -e   # fail fast
 
 echo "Is there Heroku? $(which heroku)"
 
-echo "===== A ======"
+echo "===== echo \$@ ======"
 echo $@
 echo ""
 
-echo "===== B ======"
+echo "===== env ======"
 env
 echo ""
 
-echo "===== BP_DIR ======"
+echo "===== ls -la ======"
 ls -la
 echo ""
 
-echo "===== env ======"
+echo "===== cat BUILD_DIR/.env ======"
 cat "$1/.env"
 
-echo "===== BUILD_DIR ======"
+echo "===== ls -la BUILD_DIR BUILD_DIR/.heroku ======"
 ls -la "$1" "$1/.heroku"
 echo ""
 
-echo "===== CACHE_DIR ======"
+echo "===== ls -la CACHE_DIR ======"
 ls -la "$3"
 echo ""
 
-echo "===== ENV_DIR ======"
+echo "===== ls -la ENV_DIR ======"
 ls -la "$2"
 echo ""
 

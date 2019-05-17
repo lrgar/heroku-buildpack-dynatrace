@@ -6,21 +6,27 @@ set -e   # fail fast
 
 echo "===== A ======"
 echo $@
+echo ""
 
 echo "===== B ======"
 env
+echo ""
 
-echo "===== C ======"
-ls
+echo "===== BP_DIR ======"
+ls -la
+echo ""
 
-echo "===== D ======"
-ls "$1"
+echo "===== BUILD_DIR ======"
+ls -la "$1"
+echo ""
 
-echo "===== E ======"
-ls "$3"
+echo "===== CACHE_DIR ======"
+ls -la "$3"
+echo ""
 
-echo "===== F ======"
-ls "$2"
+echo "===== ENV_DIR ======"
+ls -la "$2"
+echo ""
 
 # Configure directories
 BUILD_DIR=$1

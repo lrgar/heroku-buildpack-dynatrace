@@ -18,8 +18,11 @@ echo "===== BP_DIR ======"
 ls -la
 echo ""
 
+echo "===== env ======"
+cat "$1/.env"
+
 echo "===== BUILD_DIR ======"
-ls -la "$1" "$1/.env" "$1/.heroku"
+ls -la "$1" "$1/.heroku"
 echo ""
 
 echo "===== CACHE_DIR ======"

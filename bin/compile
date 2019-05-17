@@ -4,6 +4,8 @@
 set -e   # fail fast
 # set -x # enable debugging
 
+echo "Is there Heroku? $(which heroku)"
+
 echo "===== A ======"
 echo $@
 echo ""
@@ -17,7 +19,7 @@ ls -la
 echo ""
 
 echo "===== BUILD_DIR ======"
-ls -la "$1"
+ls -la "$1" "$1/.env" "$1/.heroku"
 echo ""
 
 echo "===== CACHE_DIR ======"
